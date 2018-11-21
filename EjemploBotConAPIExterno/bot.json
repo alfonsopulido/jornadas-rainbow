@@ -1,0 +1,21 @@
+{
+    "rainbow": {
+        "host": "sandbox.openrainbow.com",
+        "mode": "xmpp"
+    },
+    "credentials": {
+        "login": "crear-login",
+        "password": "crear-contraseña"
+    },
+    "logs": {
+        "enableConsoleLogs": false,
+        "enableFileLogs": false,
+        "file": {
+            "path": "/var/tmp/chatbot/",
+            "level": "debug"
+        }
+    },
+    "im": {
+        "sendReadReceipt": false
+    }
+}

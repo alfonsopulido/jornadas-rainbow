@@ -1,0 +1,212 @@
+{
+    "majadahonda": {
+        "message1": {
+            "type": "message",
+            "value": "Bienvenido al canal de información automatizado del Ayuntamiento de Majadahonda.",
+            "waiting": 1000,
+            "next": "message2"
+        },
+        "message2": {
+            "type": "message",
+            "value": "Estos son los servicios disponibles en el BOT (puede introducirlo directamente para ingresar en la opción): ",
+            "waiting": 1000,
+            "next": "message3"
+        },
+        "message3": {
+            "type": "message",
+            "value": "#sanidad - Servicios e información sanitaria",
+            "waiting": 1000,
+            "next": "message4"
+        },
+        "message4": {
+            "type": "message",
+            "value": "#campamento- Información Campamento de Verano 2018.",
+            "waiting": 1000,
+            "next": "message5"
+        },
+        "message5": {
+            "type": "message",
+            "value": "#tiempo - Temperatura actual en Majadahonda.",
+            "waiting": 1000,
+            "next": "message6"
+        },
+        "message6": {
+            "type": "message",
+            "value": "#mercadillo - Información mercadillo Majadahonda.",
+            "waiting": 1000,
+            "next": "null"
+        }
+    },
+
+    
+
+
+
+    "sanidad": {
+        "message": {
+            "type": "message",
+            "value": "Información de los servicios y campañas de sanidad disponibles en la comunidad",
+            "waiting": 1000,
+            "next": "opciones_sanidad"
+        },
+        "opciones_sanidad": {
+            "type": "choice",
+            "value": "Elija la opción deseada 'A', 'B' o 'C' ",
+            "list": ["A. Centros de Salud", "B. Vacunación" , "C. Mascotas"],
+            "invalid": "Opción inválida. Por favor elegir nuevamente.",
+            "accept": ["A", "B", "C"],
+            "waiting": 2000,
+            "next": ["centroSalud1", "vacunacion", "mascotas"]
+        },
+
+        "centroSalud1": {
+            "type": "message",
+            "value": "CENTRO DE SALUD CERRO DEL AIRE. Dirección: Avda. España 7 (28220) - Majadahonda.Horario: Lunes a viernes de 8:30 a 20:30 Horario de urgencias: Lunes a viernes de 20:30 a 8:30. 24 H (sábados, domingos y festivos). Teléfonos: 91 639 03 19 - 91 639 60 61. \n \n",
+            "waiting": 1500,
+            "next": "centroSalud2" 
+            },
+        
+        "centroSalud2": {
+            "type": "message",
+            "value": "CENTRO DE SALUD VALLE DE LA OLIVA. Dirección: C/ Enrique Granados, 2 (28220) - Majadahonda. Horario: De lunes a viernes de 8:30 a 20:30. Teléfonos: 91 679 59 63 - 91 679 59 64. Fax: 91 602 76 83. \n \n",
+            "waiting": 1500,
+            "next": "centroSalud3"
+            },
+
+            "centroSalud3": {
+            "type": "message",
+            "value": "HOSPITAL UNIVERSITARIO PUERTA DE HIERRO MAJADAHONDA. Dirección: Calle de Manuel de Falla, 1 28222 Majadahonda, Madrid. Citas: 91 191 65 65 / 91 191 72 99. Teléfono: 91 191 60 00. \n \n",
+            "waiting": 1500,
+            "next": "centroSalud4"
+            },
+
+            "centroSalud4": {
+            "type": "message",
+            "value": "SERVICIO DE PREVENCIÓN Y PROMOCIÓN DE LA SALUD. Dirección: Avenida Guadarrama, 34. Teléfono de información: 91 634 94 10.",
+            "waiting": 1500,
+            "next": "null"
+            },                
+
+
+
+        "vacunacion": {
+            "type": "message",
+            "value": "CAMPAÑA DE DONACIÓN DE SANGRE - JUNIO. \n Viernes 8 de junio de 2018. \nUnidad móvil en Plaza de Los Jardinillos.  Horario: 07 a 21 horas." 
+        },
+
+
+
+
+        "mascotas": {
+            "type": "message",
+            "value": "Campaña de vacunación se desarrolla sobre los meses de mayo o junio. \n Dirección: Camino de la Dehesa s/n. Majadahonda. \nHorario  Primavera y verano: de lunes a viernes de 10:00 a 14:00h y de 17:00 a 19:00h. Sábados de 10:00 a 14:00h\n"
+        }
+        
+    },
+
+
+
+    "campamento": {
+        "message": {
+            "type": "message",
+            "value": "Período de julio: Inscripciones del 4 al 15 de junio.\n  Período de agosto y septiembre: Inscripciones del 2 al 6 de julio.",
+            "waiting": 1000,
+            "next": "campamento_horarios"
+        },
+        "campamento_horarios": {
+            "type": "message",
+            "value": "Horarios de actividad: de 9:30 a 13:30 horas",
+            "waiting": 1000,
+            "next": "campamento_info"
+        },
+        "campamento_info": {
+            "type": "message",
+            "value": "Área de Educación, C/ Norias, 29. Teléfono: 91 634 9132. email: actividadeducativa@majadahonda.org",
+            "waiting": 1000,
+            "next": "null"
+        }
+    },
+
+    "tiempo": {
+        "message": {
+            "type": "message",
+            "value": "La temperatura actual en Majadahonda es de:",
+            "waiting": 1000,
+            "next": "null"
+        }
+    },
+
+
+
+    "question$$$": {
+        "question": {
+            "type": "question",
+            "value": "This scenario waits for your input and displays a final message",
+            "waiting": 2000,
+            "next": "message"
+        },
+        "message": {
+            "type": "message",
+            "value": "This is the end of this scenario!"
+        }
+    },
+
+
+    
+
+
+
+    "choice_adv$$$": {
+        "message": {
+            "type": "message",
+            "value": "This scenario lets you choose an item by specifying an other value",
+            "waiting": 2000,
+            "next": "choice"
+        },
+        "choice": {
+            "type": "choice",
+            "value": "Enter 'A', 'B' or 'C' to continue. Others inputs will not been accepted",
+            "list": ["A. Amsterdam", "B. Berlin", "C. Calgary"],
+            "invalid": "Only the proposed answer is accepted",
+            "accept": ["A", "B", "C"],
+            "waiting": 2000,
+            "next": ["amsterdam", "berlin", "calgary"]
+        },
+        "amsterdam": {
+            "type": "message",
+            "value": "Welcome to Amsterdam! Bye"
+        },
+        "berlin": {
+            "type": "message",
+            "value": "Welcome to Berlin! Bye"
+        },
+        "calgary": {
+            "type": "message",
+            "value": "Welcome to Calgary! Bye"
+        }
+    },
+    "routing": {
+        "message": {
+            "type": "message",
+            "value": "This scenario will force to go to the step 'no' even if you entered 'yes'",
+            "waiting": 2000,
+            "next": "choice"
+        },
+        "choice": {
+            "type": "choice",
+            "value": "Enter 'yes' or 'no' to continue. You will be forced to no",
+            "list": ["yes", "no"],
+            "invalid": "Only the proposed answer is accepted",
+            "waiting": 2000,
+            "next": ["end_yes", "end_no"]
+        },
+        "end_yes": {
+            "type": "message",
+            "value": "'YES' chosen. Bye!"
+        },
+        "end_no": {
+            "type": "message",
+            "value": "'NO' chosen. Bye!"
+        }
+    }
+}
